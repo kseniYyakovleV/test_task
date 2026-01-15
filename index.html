@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <h1>РЕГИСТРАЦИЯ</h1>
+
+    <form action="/" method="post">
+        <p>Основная информация</p>
+
+        <div>
+            <label for="nameInput">Имя</label>
+            <input type="text" name="name" id="nameInput" placeholder="Имя">
+            <hr>
+        </div>
+
+        <div>
+            <label for="lastnameInput">Фамилия</label>
+            <input type="text" name="lastname" id="lastnameInput" placeholder="Фамилия">
+            <hr>
+        </div>
+
+        <div>
+            <label for="fatherName">Отчество</label>
+            <input type="text" name="fatherName" id="fatherName" placeholder="Отчество (при наличии)">
+            <hr>
+        </div>
+
+        <div>
+            <label for="dateOfBirthday" id="dateOfBirthdayLabel">Дата рождения</label>
+            <input id="dateOfBirthday" name="dateOfBirthday" type="date">
+            <hr>
+        </div>
+
+        <div>
+            <label id="phoneNumberLabel">Номер телефона</label>
+            <div id="phoneNumberContainer">
+                <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon">
+                <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow">
+                <input type="tel" name="" id="phoneNumber" placeholder="+591" value="+591">
+                
+                
+            </div>
+            <div id="countriesListForNumberContainer" >
+                <div id="countriesListForNumber">
+                    <div class="country" id="bolivia">
+                        <img class="icon" src="country_icons/Bolivia.png" alt="">
+                        <span>Боливия</span>
+                    </div>
+
+                    <div class="country" id="brazilia">
+                        <img class="icon" src="country_icons/Brazilia.png" alt="">
+                        <span>Бразилия</span>
+                    </div>
+
+                    <div class="country" id="vengria">
+                        <img class="icon" src="country_icons/Vengria.png" alt="">
+                        <span>Венгрия</span>
+                    </div>
+
+                    <div class="country" id="indonesia">
+                        <img class="icon" src="country_icons/Indonesia.png" alt="">
+                        <span>Индонезия</span>
+                    </div>
+
+                    <div class="country" id="kazakhstan">
+                        <img class="icon" src="country_icons/Kazakhstan.png" alt="">
+                        <span>Казахстан</span>
+                    </div>
+
+                    <div class="country" id="myanmar">
+                        <img class="icon" src="country_icons/Myanmar.png" alt="">
+                        <span>Мьянма</span>
+                    </div>
+
+                    <div class="country" id="namibia">
+                        <img class="icon" src="country_icons/Namibia.png" alt="">
+                        <span>Намибия</span>
+                    </div>
+                            
+                    <div class="country" id="rwanda">
+                        <img class="icon" src="country_icons/Rwanda.png" alt="">
+                        <span>Руанда</span>
+                    </div>
+
+                    <div class="country" id="uzbekistan">
+                        <img class="icon" src="country_icons/Uzbekistan.png" alt="">
+                        <span>Узбекистан</span>
+                    </div>
+                        
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div>
+            <label for="email" id="emailLabel">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="E-mail">
+            <hr>
+        </div>
+
+        <div>
+            <label for="teamName" id="teamNameLabel">Название команды</label>
+            <input id="teamName" name="teamName" type="text" placeholder="Название команды">
+            <hr>
+        </div>
+
+
+        <div>
+            <label id="phoneNumberLabel">Страна</label>
+            <div id="phoneNumberContainer">
+                <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon2">
+                <input type="text" name="" id="countryNameInput" readonly value="Боливия" size = "7">
+                <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow2">
+                
+                
+            </div>
+            <div id="countriesListContainer">
+                <div id="countriesList">
+                    <div class="country2" id="bolivia2">
+                        <img class="icon" src="country_icons/Bolivia.png" alt="">
+                        <span>Боливия</span>
+                    </div>
+
+                    <div class="country2" id="brazilia2">
+                        <img class="icon" src="country_icons/Brazilia.png" alt="">
+                        <span>Бразилия</span>
+                    </div>
+
+                    <div class="country2" id="vengria2">
+                        <img class="icon" src="country_icons/Vengria.png" alt="">
+                        <span>Венгрия</span>
+                    </div>
+
+                    <div class="country2" id="indonesia2">
+                        <img class="icon" src="country_icons/Indonesia.png" alt="">
+                        <span>Индонезия</span>
+                    </div>
+
+                    <div class="country2" id="kazakhstan2">
+                        <img class="icon" src="country_icons/Kazakhstan.png" alt="">
+                        <span>Казахстан</span>
+                    </div>
+
+                    <div class="country2" id="myanmar2">
+                        <img class="icon" src="country_icons/Myanmar.png" alt="">
+                        <span>Мьянма</span>
+                    </div>
+
+                    <div class="country2" id="namibia2">
+                        <img class="icon" src="country_icons/Namibia.png" alt="">
+                        <span>Намибия</span>
+                    </div>
+                            
+                    <div class="country2" id="rwanda2">
+                        <img class="icon" src="country_icons/Rwanda.png" alt="">
+                        <span>Руанда</span>
+                    </div>
+
+                    <div class="country2" id="uzbekistan2">
+                        <img class="icon" src="country_icons/Uzbekistan.png" alt="">
+                        <span>Узбекистан</span>
+                    </div>
+                        
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div>
+            <label for="foreignPassport" id="foreignPassportLabel">Номер заграничного паспорта</label>
+            <input id="foreignPassport" name="foreignPassport" type="text" placeholder="Номер заграничного паспорта">
+            <hr>
+        </div>
+
+        <div>
+            <label for="foreignPassportLifespan" id="foreignPassportLifespanLabel">Срок действия заграничного паспорта</label>
+            <input class="warn" id="foreignPassportLifespan" name="foreignPassportLifespan" type="date">
+            <hr class = "warn">
+            <div id="wrongLifespanMessage">
+                <img src="WarnIcon.png" id="warnIcon" alt="">
+                <span class="warn">Рекомендуемый срок действия загранпаспорта должен быть не менее 6 месяцев на момент въезда в Россию</span>
+            </div>
+        </div>
+
+
+        <div id="haveVisaContainer">
+            <img id="iHave"  src="Yes.png" alt="Есть">
+            <img id="iHaveNo" src="No.png" alt="Нету">
+            <span id="iHaveVisaLabel">У меня есть виза</span>
+            <input type="checkbox"  name="haveVisa" id="haveVisaHiddenInput">
+        </div>
+
+        <div class="addFiles">
+            <div id="addForeignPassportPhotoContainer" class="fileInputContainer">
+                <div class="emptyFileInput">
+                    <input type="file" name="foreignPassport" id="foreignPassportInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
+                    <img src="fileIcon.png" alt="" class="fileIcon">
+                    <span>Прикрепить фото заграничного паспорта</span>
+                </div>
+                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
+            </div>
+
+
+            <div id="addRussianPassportPhotoContainer" class="fileInputContainer">
+                <div class="emptyFileInput">
+                    <input type="file" name="russianPassport" id="russianPassportInput" class="fileInput" accept=".png, .jpg, .webp, .pdf, .jpeg">
+                    <img src="fileIcon.png" alt="" class="fileIcon">
+                    <span>Прикрепить фото ID (или российского паспорта)</span>
+                </div>
+                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
+            </div>
+
+
+            <div id="addVisaPhotoContainer" class="fileInputContainer">
+                <div class="emptyFileInput">
+                    <input type="file" name="visa" id="visaInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
+                    <img src="fileIcon.png" alt="" class="fileIcon">
+                    <span>Прикрепить фото визы</span>
+                </div>
+                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
+            </div>
+        </div>
+
+
+        <div id="backAndNextContainer">
+            <a href="/back"><img src="BackButton.png" alt="" id="backButton"></a>
+            
+            <div id="nextContainer">
+                <img src="NextButton.png" alt="Далее" id="nextButton">
+                <input type="submit" id="submit" value="">
+            </div>
+            
+
+        </div>
+
+        <div id="agreement"><span>Нажимая кнопку «Далее», я даю согласие на обработку предоставленных мною персональных данных, использование фото и видео с моим изображением 
+для редакционных целей и заявляю о своем согласии с правилами защиты информации, изложенными в Федеральном законе от 27 июля 2006 года № 152-ФЗ 
+«О персональных данных». </span></div>
+        
+
+    </form>
+    <script src="script.js"></script>
+
+
+    
+</body>
+</html>

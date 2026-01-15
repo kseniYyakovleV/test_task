@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Onder';
+    src: url(onder/ONDER-REGULAR.TTF);
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url(Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
+
+body {
+    background-color: #182540;
+}
+
+form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Ubuntu Mono';
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Onder';
+    color: transparent;
+	background-clip: text;
+
+	background-image: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background-image: linear-gradient(52.1deg, #8E4A7B 3.08%, #4A8CB1 31.27%, #6FB7B0 59.46%, #D3ECA6 87.65%, #A96C1E 115.84%);
+    background-image: linear-gradient(53.43deg, #B21A88 3%, #0997E7 27.59%, #00C7B3 50.47%, #D5FF6B 74.03%);
+    background-image: linear-gradient(54.71deg, #B21A88 2.92%, #0997E7 36.52%, #00C7B3 67.8%, #D5FF6B 100%);
+}
+
+form p {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Ubuntu Mono';
+    color: white;
+    text-align: center;
+}
+
+form label {
+    color: white;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 8px;
+}
+
+
+
+label {
+    visibility: hidden;
+    color: white;
+}
+
+#dateOfBirthdayLabel, #foreignPassportLifespanLabel {
+    visibility: visible;
+}
+
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #00C7B3;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+
+
+hr {
+    color: white;
+    opacity: 10%;
+    width: 100%;
+}
+
+form div:hover hr {
+    opacity: 100%;
+    color: #00C7B3;
+}
+
+::placeholder {
+    color: white
+}
+
+
+#phoneNumberContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#arrow {
+    width: 8px;
+    height: 5px;
+    margin-left: 3px;
+    margin-right: 8px;
+}
+
+#arrow2 {
+    width: 8px;
+    height: 5px;
+}
+
+.icon {
+    width: 20px;
+    height: 14px;
+    margin-right: 11px;
+}
+
+#countriesListForNumberContainer, #countriesListContainer {
+    display: none ;
+}
+#countriesListForNumber {
+    margin-top: 10px;
+}
+
+.country, .country2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.country span, .country2 span {
+    color: white;
+    vertical-align: middle;
+
+}
+
+.country:hover span, .country2:hover span {
+    color: #00C7B3;
+}
+
+#phoneNumberLabel {
+    visibility: visible;
+}
+
+#countriesListContainer {
+    margin-top: 5px;
+}
+
+#warnIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+#wrongLifespanMessage {
+    color: #FF5658;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.warn {
+    color: #FF5658;
+    opacity: 100%;
+}
+
+
+
+/* 'Have visa' container styles */
+
+#haveVisaContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#haveVisaContainer img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+}
+
+#iHaveVisaLabel {
+    color: white;
+    font-size: 12px;
+    margin-left: 25px;
+}
+
+#haveVisaContainer input {
+    display: none;
+}
+
+#iHave {
+    display: none;
+}
+
+
+/* Files styles */
+
+.fileInputContainer {
+    margin-top: 5px;
+}
+
+.fileInputContainer div {
+    display: flex;
+    flex-direction: row;
+}
+
+.fileIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.fileInput {
+    display: none;
+}
+
+#addForeignPassportPhotoContainer {
+    margin-top: 20px;
+}
+
+.fileInputContainer span {
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Ubuntu Mono';
+}
+
+.emptyFileInput {
+    color: white;
+}
+
+.notEmptyFileInput {
+    color: #00C7B3;
+}
+
+
+span.tooBigFileWarning {
+    color: #FF5658;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.tooBigFileWarning {
+    display: none;
+}
+
+
+/* Back and next buttons */
+
+#backAndNextContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#backButton {
+    width: 46px;
+    height: 46px;
+}
+
+#nextContainer {
+    margin: 0 auto;
+    padding-right: 46px;
+}
+
+#nextButton {
+    width: 189px;
+    height: 46px;
+}
+
+#submit {
+    display: none;
+}
+
+
+
+/* Agreement */
+
+#agreement {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    opacity: 50%;
+    color: white;
+}
