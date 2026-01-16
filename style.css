@@ -34,38 +34,12 @@ h1 {
     background-image: linear-gradient(54.71deg, #B21A88 2.92%, #0997E7 36.52%, #00C7B3 67.8%, #D5FF6B 100%);
 }
 
-form p {
+p {
     font-weight: 400;
     font-size: 20px;
-    font-family: 'Ubuntu Mono';
     color: white;
     text-align: center;
 }
-
-form label {
-    color: white;
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    font-size: 8px;
-}
-
-
-
-label {
-    visibility: hidden;
-    color: white;
-}
-
-#dateOfBirthdayLabel, #foreignPassportLifespanLabel {
-    visibility: visible;
-}
-
 
 input {
     background-color: transparent;
@@ -74,10 +48,7 @@ input {
     color: #00C7B3;
     font-weight: 400;
     font-size: 14px;
-
 }
-
-
 
 hr {
     color: white;
@@ -85,30 +56,127 @@ hr {
     width: 100%;
 }
 
+::placeholder {
+    color: white
+}
+
+form label {
+    color: white;
+    font-size: 8px;
+    visibility: hidden;
+    color: white;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
 form div:hover hr {
     opacity: 100%;
     color: #00C7B3;
 }
 
-::placeholder {
-    color: white
+
+
+
+.invalidInputField, .validInputField, .emptyInputField, div.countryContainer, #haveVisaContainer, #nextButton{
+    cursor: pointer;
+}
+
+.invalidInputField input, .validInputField input, .emptyInputField input{
+    cursor: pointer;
 }
 
 
-#phoneNumberContainer {
+
+
+/* Warning styles */
+.warningMessage {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.emptyInputField .warningMessage, .validInputField .warningMessage {
+    display: none;
+}
+
+.invalidInputField .warningMessage {
+    color: #FF5658;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.invalidInputField hr {
+    color: #FF5658;
+    opacity: 100%;
+}
+
+
+
+
+.warnIcon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+
+.addFiles .invalidInputField{
+    display: flex;
+    flex-direction: column;
+}
+
+.addFiles .validInputField .warningMessage span {
+    color: #00C7B3;
+}
+
+.addFiles .inputWrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.validInputField .emptyFileInput span {
+    color: #00C7B3;
+}
+
+.fileInputContainer .emptyInputField .emptyFileInput span, .fileInputContainer .invalidInputField .emptyFileInput span {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+/* Always visible labels */
+#dateOfBirthdayLabel, #foreignPassportLifespanLabel {
+    visibility: visible;
+}
+
+
+
+
+
+
+
+/* Countries list */
+#phoneNumberContainer, #countryContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 #arrow {
-    width: 8px;
-    height: 5px;
     margin-left: 3px;
     margin-right: 8px;
 }
 
-#arrow2 {
+#arrow, #arrow2 {
     width: 8px;
     height: 5px;
 }
@@ -151,23 +219,6 @@ form div:hover hr {
     margin-top: 5px;
 }
 
-#warnIcon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}
-
-#wrongLifespanMessage {
-    color: #FF5658;
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
-}
-
-.warn {
-    color: #FF5658;
-    opacity: 100%;
-}
 
 
 
@@ -232,35 +283,20 @@ form div:hover hr {
     font-family: 'Ubuntu Mono';
 }
 
-.emptyFileInput {
-    color: white;
-}
-
-.notEmptyFileInput {
-    color: #00C7B3;
-}
 
 
-span.tooBigFileWarning {
-    color: #FF5658;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
 
-.tooBigFileWarning {
-    display: none;
-}
+
+
 
 
 /* Back and next buttons */
-
 #backAndNextContainer {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 
 #backButton {
     width: 46px;
@@ -284,11 +320,14 @@ span.tooBigFileWarning {
 
 
 /* Agreement */
-
 #agreement {
     margin-top: 20px;
     text-align: center;
     font-size: 10px;
     opacity: 50%;
+}
+
+a {
+    text-decoration: none;
     color: white;
 }

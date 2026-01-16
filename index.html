@@ -15,39 +15,46 @@
     <form action="/" method="post">
         <p>Основная информация</p>
 
-        <div>
+        <div class="emptyInputField">
             <label for="nameInput">Имя</label>
             <input type="text" name="name" id="nameInput" placeholder="Имя">
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Имя обязательно для заполнения</span>
+            </div>
         </div>
 
-        <div>
+        <div class="emptyInputField">
             <label for="lastnameInput">Фамилия</label>
             <input type="text" name="lastname" id="lastnameInput" placeholder="Фамилия">
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Фамилия обязательна для заполнения</span>
+            </div>
         </div>
 
-        <div>
+        <div class="validInputField">
             <label for="fatherName">Отчество</label>
             <input type="text" name="fatherName" id="fatherName" placeholder="Отчество (при наличии)">
             <hr>
         </div>
 
-        <div>
+        <div class="validInputField">
             <label for="dateOfBirthday" id="dateOfBirthdayLabel">Дата рождения</label>
-            <input id="dateOfBirthday" name="dateOfBirthday" type="date">
+            <input id="dateOfBirthday" name="dateOfBirthday" type="date" max="2007-12-31"/>
             <hr>
         </div>
 
-        <div>
+        <div class="validInputField">
             <label id="phoneNumberLabel">Номер телефона</label>
             <div id="phoneNumberContainer">
                 <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon">
                 <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow">
-                <input type="tel" name="" id="phoneNumber" placeholder="+591" value="+591">
-                
-                
+                <input type="tel" name="" id="phoneNumber" placeholder="+591" value="+591">             
             </div>
+
             <div id="countriesListForNumberContainer" >
                 <div id="countriesListForNumber">
                     <div class="country" id="bolivia">
@@ -98,24 +105,34 @@
                 </div>
             </div>
             <hr>
+
+            
         </div>
 
-        <div>
+        <div class="emptyInputField">
             <label for="email" id="emailLabel">E-mail</label>
             <input id="email" name="email" type="email" placeholder="E-mail">
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Неправильный формат электронной почты</span>
+            </div>
         </div>
 
-        <div>
+        <div class="emptyInputField">
             <label for="teamName" id="teamNameLabel">Название команды</label>
             <input id="teamName" name="teamName" type="text" placeholder="Название команды">
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Название команды обязательно для заполнения</span>
+            </div>
         </div>
 
 
-        <div>
-            <label id="phoneNumberLabel">Страна</label>
-            <div id="phoneNumberContainer">
+        <div class="validInputField">
+            <label id="countryLabel">Страна</label>
+            <div id="countryContainer">
                 <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon2">
                 <input type="text" name="" id="countryNameInput" readonly value="Боливия" size = "7">
                 <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow2">
@@ -174,18 +191,22 @@
             <hr>
         </div>
 
-        <div>
+        <div class="emptyInputField">
             <label for="foreignPassport" id="foreignPassportLabel">Номер заграничного паспорта</label>
             <input id="foreignPassport" name="foreignPassport" type="text" placeholder="Номер заграничного паспорта">
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Номер заграничного паспорта обязателен для заполнения</span>
+            </div>
         </div>
 
-        <div>
+        <div class="invalidInputField">
             <label for="foreignPassportLifespan" id="foreignPassportLifespanLabel">Срок действия заграничного паспорта</label>
             <input class="warn" id="foreignPassportLifespan" name="foreignPassportLifespan" type="date">
             <hr class = "warn">
-            <div id="wrongLifespanMessage">
-                <img src="WarnIcon.png" id="warnIcon" alt="">
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Рекомендуемый срок действия загранпаспорта должен быть не менее 6 месяцев на момент въезда в Россию</span>
             </div>
         </div>
@@ -200,32 +221,48 @@
 
         <div class="addFiles">
             <div id="addForeignPassportPhotoContainer" class="fileInputContainer">
-                <div class="emptyFileInput">
-                    <input type="file" name="foreignPassport" id="foreignPassportInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
-                    <img src="fileIcon.png" alt="" class="fileIcon">
-                    <span>Прикрепить фото заграничного паспорта</span>
+                <div class="emptyInputField">
+                    <div class="emptyFileInput">
+                        <input type="file" name="foreignPassport" id="foreignPassportInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
+                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <span>Прикрепить фото заграничного паспорта</span>
+                    </div>
+                    <div class="warningMessage">
+                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <span class="warn">Необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
+                    </div>
                 </div>
-                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
             </div>
 
 
             <div id="addRussianPassportPhotoContainer" class="fileInputContainer">
-                <div class="emptyFileInput">
-                    <input type="file" name="russianPassport" id="russianPassportInput" class="fileInput" accept=".png, .jpg, .webp, .pdf, .jpeg">
-                    <img src="fileIcon.png" alt="" class="fileIcon">
-                    <span>Прикрепить фото ID (или российского паспорта)</span>
+                <div class="emptyInputField">
+                    <div class="emptyFileInput">
+                        <input type="file" name="russianPassport" id="russianPassportInput" class="fileInput" accept=".png, .jpg, .webp, .pdf, .jpeg">
+                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <span>Прикрепить фото ID (или российского паспорта)</span>
+                    </div>
+                    <div class="warningMessage">
+                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <span class="warn">Необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
+                    </div>
                 </div>
-                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
             </div>
 
 
             <div id="addVisaPhotoContainer" class="fileInputContainer">
-                <div class="emptyFileInput">
-                    <input type="file" name="visa" id="visaInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
-                    <img src="fileIcon.png" alt="" class="fileIcon">
-                    <span>Прикрепить фото визы</span>
+                <div class="emptyInputField">
+                    <div class="emptyFileInput">
+                        <input type="file" name="visa" id="visaInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
+                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <span>Прикрепить фото визы</span>
+                    </div>
+                    <div class="warningMessage">
+                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <span class="warn">При наличии визы необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
+                    </div>
                 </div>
-                <span class="tooBigFileWarning">Файл может иметь расширение .png/ .jpg/ .webp/ .pdf и не может занимать больше 5 МБайт </span>
+                
             </div>
         </div>
 
@@ -241,12 +278,13 @@
 
         </div>
 
-        <div id="agreement"><span>Нажимая кнопку «Далее», я даю согласие на обработку предоставленных мною персональных данных, использование фото и видео с моим изображением 
+        <div id="agreement"><a href="/agreement" style="text-decoration: none;"><span>Нажимая кнопку «Далее», я даю согласие на обработку предоставленных мною персональных данных, использование фото и видео с моим изображением 
 для редакционных целей и заявляю о своем согласии с правилами защиты информации, изложенными в Федеральном законе от 27 июля 2006 года № 152-ФЗ 
-«О персональных данных». </span></div>
+«О персональных данных». </span></a></div>
         
 
     </form>
+    <script src="validation.js"></script>
     <script src="script.js"></script>
 
 
