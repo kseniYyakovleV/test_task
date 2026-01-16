@@ -101,18 +101,24 @@ for (country of countries2) {
 
 let haveVisaContainer = document.getElementById("haveVisaContainer");
 let hiddenCheckboxInput = document.getElementById("haveVisaHiddenInput");
-console.log(hiddenCheckboxInput.enabled);
+let addVisaPhotoContainer = document.getElementById("addVisaPhotoContainer");
+let visaInput = document.getElementById("visaInput");
 haveVisaContainer.addEventListener("click", event=> {
     let iHaveNo = document.getElementById("iHaveNo");
     let iHave = document.getElementById("iHave");
+    let addVisaPhoto = addVisaPhotoContainer.getElementsByTagName("div")[0];
     if (iHaveNo.style.display == "none") {
         iHaveNo.style.display = "block";
         iHave.style.display = "none";
         hiddenCheckboxInput.checked = false;
+        addVisaPhoto.className = "validInputField";
+        visaInput.value = "";
+
     } else {
         iHaveNo.style.display = "none";
         iHave.style.display = "block";
         hiddenCheckboxInput.checked = true;
+        addVisaPhoto.className = "emptyInputField";
     }
 });
 
@@ -125,8 +131,16 @@ for (fileInputContainer of fileInputContainers) {
         while (target.className != "fileInputContainer") {
             target = target.parentElement;
         }
+        if(target.id == "addVisaPhotoContainer") {
+            console.log("Yes")
+            let iHave = document.getElementById("iHave");
+            if (iHave.style.display == "none") {
+                console.log("double yes")
+                return;
+            }
+        }
+
         let fileInput = target.getElementsByClassName("fileInput")[0];
-        console.log(fileInput);
         fileInput.click()
     });
 }
@@ -158,20 +172,24 @@ for (fileInput of fileInputs) {
         let target = event.target;
         let file = target.files[0];
         let fileInputContainer = target.parentElement.parentElement;
-        let tooBigFileWarning = fileInputContainer.getElementsByClassName("tooBigFileWarning")[0];
         let inputWrapper = fileInputContainer.getElementsByTagName("div")[0];
 
         if (isFileNameValid(file) && isFileSizeValid(file)) {
-            tooBigFileWarning.style.display = "none";   
-            inputWrapper.className = "notEmptyFileInput"
+            fileInputContainer.className = "validInputField";
         } else {
-            tooBigFileWarning.style.display = "block";
+            fileInputContainer.className = "invalidInputField";
         }
         
     });
 }
 
 
+let nextContainer = document.getElementById("nextContainer");
+nextContainer.addEventListener("click", event=> {
+    if (checkInputs()) {
+        submit.click();
+    }
+});
 
 
 

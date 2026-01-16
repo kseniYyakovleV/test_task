@@ -9,6 +9,11 @@ function lastnameIsValid() {
     return lastnameInput.value != "";
 }
 
+let dateOfBirthday = document.getElementById("dateOfBirthday");
+function dateOfBirthdayIsValid() {
+    return dateOfBirthday.value != "";
+}
+
 
 phoneNumber = document.getElementById("phoneNumber");
 function phoneNumberIsValid() {
@@ -64,4 +69,58 @@ function teamNameIsValid() {
     return teamName.value != "";
 }
 
+let foreignPassport = document.getElementById("foreignPassport");
+function foreignPassportIsValid() {
+    return foreignPassport.value != "";
+}
 
+
+
+let submit = document.getElementById("submit");
+function checkInputs() {
+    let result = true;
+    if (!nameIsValid()) {
+        nameInput.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        nameInput.parentElement.className = "validInputField";
+    }
+
+    if (!lastnameIsValid()) {
+        lastnameInput.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        lastnameInput.parentElement.className = "validInputField";
+    }
+
+    if (!dateOfBirthdayIsValid()) {
+        dateOfBirthday.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        dateOfBirthday.parentElement.className = "validInputField";
+    }
+
+
+    if (!emailIsValid()) {
+        email.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        email.parentElement.className = "validInputField";
+    }
+
+    if (!teamNameIsValid()) {
+        teamName.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        teamName.parentElement.className = "validInputField";
+    }
+
+    if (!foreignPassportIsValid()) {
+        foreignPassport.parentElement.className = "invalidInputField";
+        result&= false;
+    } else {
+        foreignPassport.parentElement.className = "validInputField";
+    }
+
+    return result;
+}

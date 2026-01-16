@@ -12,7 +12,7 @@
 
     <h1>РЕГИСТРАЦИЯ</h1>
 
-    <form action="/" method="post">
+    <form action="/registration" method="post">
         <p>Основная информация</p>
 
         <div class="emptyInputField">
@@ -45,6 +45,10 @@
             <label for="dateOfBirthday" id="dateOfBirthdayLabel">Дата рождения</label>
             <input id="dateOfBirthday" name="dateOfBirthday" type="date" max="2007-12-31"/>
             <hr>
+            <div class="warningMessage">
+                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <span class="warn">Неправильный формат даты рождения</span>
+            </div>
         </div>
 
         <div class="validInputField">
@@ -213,7 +217,7 @@
 
 
         <div id="haveVisaContainer">
-            <img id="iHave"  src="Yes.png" alt="Есть">
+            <img id="iHave" style="display: none;" src="Yes.png" alt="Есть">
             <img id="iHaveNo" src="No.png" alt="Нету">
             <span id="iHaveVisaLabel">У меня есть виза</span>
             <input type="checkbox"  name="haveVisa" id="haveVisaHiddenInput">
@@ -251,7 +255,7 @@
 
 
             <div id="addVisaPhotoContainer" class="fileInputContainer">
-                <div class="emptyInputField">
+                <div class="validInputField">
                     <div class="emptyFileInput">
                         <input type="file" name="visa" id="visaInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
                         <img src="fileIcon.png" alt="" class="fileIcon">

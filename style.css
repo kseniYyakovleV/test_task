@@ -83,7 +83,6 @@ form div:hover hr {
 .invalidInputField, .validInputField, .emptyInputField, div.countryContainer, #haveVisaContainer, #nextButton{
     cursor: pointer;
 }
-
 .invalidInputField input, .validInputField input, .emptyInputField input{
     cursor: pointer;
 }
