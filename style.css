@@ -186,6 +186,12 @@ form div:hover hr {
     margin-right: 11px;
 }
 
+#flagAndArrow {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+
 #countriesListForNumberContainer, #countriesListContainer {
     display: none ;
 }

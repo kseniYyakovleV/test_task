@@ -16,9 +16,9 @@ for(element of inputs) {
     }
 }
 
-let arrow = document.getElementById("arrow");
+let flagAndArrow = document.getElementById("flagAndArrow");
 let countriesListForNumberContainer = document.getElementById("countriesListForNumberContainer");
-arrow.addEventListener("click", (event)=> {
+flagAndArrow.addEventListener("click", (event)=> {
     if (countriesListForNumberContainer.style.display == "block") {
         countriesListForNumberContainer.style.display = "none";
     } else {
@@ -63,9 +63,10 @@ for (country of countries) {
 }
 
 
-let arrow2 = document.getElementById("arrow2");
+
+let countryContainer = document.getElementById("countryContainer");
 let countriesListContainer = document.getElementById("countriesListContainer");
-arrow2.addEventListener("click", (event)=> {
+countryContainer.addEventListener("click", (event)=> {
     if (countriesListContainer.style.display == "block") {
         countriesListContainer.style.display = "none";
     } else {
