@@ -75,6 +75,55 @@ function foreignPassportIsValid() {
 }
 
 
+/* Photo validation */
+
+const MAX_SIZE_MB = 5;  
+const EXTENSIONS = [".png", ".jpg", '.jpeg', '.webp', '.pdf']
+
+function isFileNameValid(file) {
+    let fileName = file.name;
+    let extensionIndex = fileName.lastIndexOf(".");
+    let extension = fileName.substring(extensionIndex, fileName.length);
+    
+    return EXTENSIONS.includes(extension);
+}
+
+function isFileSizeValid(file) {
+    let fileSize = file.size;
+    let fileSizeMB = fileSize / 2**20;
+    return fileSizeMB < MAX_SIZE_MB;
+}
+
+let fileInputs = document.getElementsByClassName("fileInput");
+for (fileInput of fileInputs) {
+    fileInput.addEventListener("input", event=> {
+        let target = event.target;
+        let file = target.files[0];
+        let fileInputContainer = target.parentElement.parentElement;
+
+        if (isFileNameValid(file) && isFileSizeValid(file)) {
+            fileInputContainer.className = "validInputField";
+        } else {
+            fileInputContainer.className = "invalidInputField";
+            target.value = "";
+        }
+        
+    });
+}
+
+
+let emptyFileInputs = document.getElementsByClassName("emptyFileInput");
+function isFilesValid() {
+    let result = true;
+    for (emptyFileInput of emptyFileInputs) {
+        let field = emptyFileInput.parentElement;
+        if (field.className == "invalidInputField") {
+            return false;
+        }
+    }
+    return true;
+}
+
 
 let submit = document.getElementById("submit");
 function checkInputs() {
@@ -121,6 +170,8 @@ function checkInputs() {
     } else {
         foreignPassport.parentElement.className = "validInputField";
     }
+
+    result&= isFilesValid();
 
     return result;
 }

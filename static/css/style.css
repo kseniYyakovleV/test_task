@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Onder';
-    src: url(onder/ONDER-REGULAR.TTF);
+    src: url(../fonts/onder/ONDER-REGULAR.TTF);
 }
 
 @font-face {
     font-family: 'Ubuntu Mono';
-    src: url(Ubuntu_Mono/UbuntuMono-Regular.ttf);
+    src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
 }
 
 
@@ -303,10 +303,12 @@ form div:hover hr {
     justify-content: space-between;
 }
 
-#backButton {
+.arrowButton {
     width: 46px;
     height: 46px;
 }
+
+
 
 #nextContainer {
     margin: 0 auto;
@@ -314,8 +316,19 @@ form div:hover hr {
 }
 
 #nextButton {
-    width: 189px;
-    height: 46px;
+    height: 44px; 
+    width: 189px; 
+    text-align: center; 
+    border-radius: 22px; 
+    border: 1px solid white; 
+    display: flex; 
+    justify-content: center; 
+    color: white; 
+}
+
+#nextButton:hover {
+    background-color: #00C7B3;
+    border-color: #00C7B3;
 }
 
 #submit {
@@ -335,4 +348,225 @@ form div:hover hr {
 a {
     text-decoration: none;
     color: white;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 49px;
+    margin-bottom: 203px;
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#rosatom {
+    width: 106px;
+    height: 22px;
+}
+
+#nuclear {
+    width: 146px;
+    height: 31px;
+}
+
+#hackatom {
+    width: 112px;
+    height: 45px;
+}
+
+#future {
+    width: 108px;
+    height: 28px;
+}
+
+
+
+#links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+}
+
+#links a, #links div {
+    font-family: 'Ubuntu Mono';
+    font-size: 16px;
+}
+
+#icons a, #links a, #links div {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#links a:hover {
+    color: #D5FF6B;
+}
+
+#links div {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 22px;
+    background-color: #D5FF6B;
+    cursor: pointer;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    padding-bottom: 100px;
+    font-family: 'Ubuntu Mono';
+    color: white;
+
+    background-image: linear-gradient(180deg, #182540 0%, #000000 100%);
+
+}
+
+footer table {
+    width: 90%;
+}
+
+
+
+
+#footerLinks {
+    display: block;
+    
+
+}
+
+#footerLinks a {
+    font-size: 18px;
+
+}
+
+
+#hackatomLogo {
+    width: 229px;
+    height: 91px;
+}
+
+#rosatomLogo {
+    width: 104px;
+    height: 21px;
+}
+
+#GAQLogo {
+    width: 104px;
+    height: 31px;
+}
+
+#NELogo {
+    width: 104px;
+    height: 19px;
+}
+
+#iceBreakerLogo {
+    width: 104px;
+    height: 24px;
+}
+
+#newsletterLogo {
+    width: 104px;
+    height: 11px;
+}
+
+#obninsktechLogo {
+    width: 104px;
+    height: 11px;
+}
+
+#usefullResourciesLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#usefullResourciesLabel hr {
+    height: 0px;
+}
+
+#rosatomAndVeonix {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#newsletterTd {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+#newsletterTd a {
+    flex: 1;
+}
+
+
+#line {
+    height: 0px;
+}
+
+
+
+
+#footerTable {
+    width: 80%;
+}
+
+
+#usefullResourciesLabel, #innerTable tr {
+    height: 40px;
+}
+
+#innerTable {
+    width: 100%;
+}
+
+.littleText {
+    font-size: 12px;
+}
+
+#veonixLink {
+    margin-right: 20px;
+}
+
+#veonixLink a:hover {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+#angle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#toTopButton {
+    cursor: pointer;
+    rotate: 90deg;
+}
+
+#rosatomGlobal {
+    height: 35px;
+}
+
+footer a:hover {
+    color: #D5FF6B;
 }

@@ -13,7 +13,7 @@ for(element of inputs) {
                 label.style.setProperty("visibility", "hidden");
             }
         });
-    }
+    }  
 }
 
 let flagAndArrow = document.getElementById("flagAndArrow");
@@ -148,41 +148,7 @@ for (fileInputContainer of fileInputContainers) {
 
 
 
-/* Photo validation */
 
-const MAX_SIZE_MB = 5;  
-const EXTENSIONS = [".png", ".jpg", '.jpeg', '.webp', '.pdf']
-
-function isFileNameValid(file) {
-    let fileName = file.name;
-    let extensionIndex = fileName.lastIndexOf(".");
-    let extension = fileName.substring(extensionIndex, fileName.length);
-    
-    return EXTENSIONS.includes(extension);
-}
-
-function isFileSizeValid(file) {
-    let fileSize = file.size;
-    let fileSizeMB = fileSize / 2**20;
-    return fileSizeMB < MAX_SIZE_MB;
-}
-
-let fileInputs = document.getElementsByClassName("fileInput");
-for (fileInput of fileInputs) {
-    fileInput.addEventListener("input", event=> {
-        let target = event.target;
-        let file = target.files[0];
-        let fileInputContainer = target.parentElement.parentElement;
-        let inputWrapper = fileInputContainer.getElementsByTagName("div")[0];
-
-        if (isFileNameValid(file) && isFileSizeValid(file)) {
-            fileInputContainer.className = "validInputField";
-        } else {
-            fileInputContainer.className = "invalidInputField";
-        }
-        
-    });
-}
 
 
 let nextContainer = document.getElementById("nextContainer");

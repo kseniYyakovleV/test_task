@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-    
+    <header id="header">
+        <div id="icons">
+            <a href="/rosatom"><img id="rosatom"  src="static/images/company_icons/Rosatom_Horizontal_white.png" alt=""></a>
+            <a href="/years"><img id="nuclear" src="static/images/company_icons/Years_of_russian_nuclear_industry.png" alt=""></a>
+            <a href="/hackatom"><img id="hackatom" src="static/images/company_icons/Hackatom.png" alt=""></a>
+            <a href="/future"><img id="future" src="static/images/company_icons/Energy_of_the_future.png" alt=""></a>
+        </div>
+
+        <div id="links">
+            <a href="/hackatom">HACKATOM - 2025</a>
+            <a href="/news">Новости</a>
+            <a href="/faq">FAQ</a>
+            <a href="/en">EN</a>
+            <div>РЕГИСТРАЦИЯ</div>
+        </div>
+    </header>   
 
     <h1>РЕГИСТРАЦИЯ</h1>
 
@@ -20,7 +35,7 @@
             <input type="text" name="name" id="nameInput" placeholder="Имя">
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Имя обязательно для заполнения</span>
             </div>
         </div>
@@ -30,7 +45,7 @@
             <input type="text" name="lastname" id="lastnameInput" placeholder="Фамилия">
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Фамилия обязательна для заполнения</span>
             </div>
         </div>
@@ -46,7 +61,7 @@
             <input id="dateOfBirthday" name="dateOfBirthday" type="date" max="2007-12-31"/>
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Неправильный формат даты рождения</span>
             </div>
         </div>
@@ -55,8 +70,8 @@
             <label id="phoneNumberLabel">Номер телефона</label>
             <div id="phoneNumberContainer">
                 <div id="flagAndArrow">
-                    <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon">
-                    <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow">
+                    <img class="icon" src="static/images/country_icons/Bolivia.png" alt="" id="choosenCountryIcon">
+                    <img src="static/images/unique_icons/Arrow 1 (Stroke).png" alt="Выбрать" id="arrow">
                 </div>
                 <input type="tel" name="" id="phoneNumber" placeholder="+591" value="+591">             
             </div>
@@ -64,47 +79,47 @@
             <div id="countriesListForNumberContainer" >
                 <div id="countriesListForNumber">
                     <div class="country" id="bolivia">
-                        <img class="icon" src="country_icons/Bolivia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Bolivia.png" alt="">
                         <span>Боливия</span>
                     </div>
 
                     <div class="country" id="brazilia">
-                        <img class="icon" src="country_icons/Brazilia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Brazilia.png" alt="">
                         <span>Бразилия</span>
                     </div>
 
                     <div class="country" id="vengria">
-                        <img class="icon" src="country_icons/Vengria.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Vengria.png" alt="">
                         <span>Венгрия</span>
                     </div>
 
                     <div class="country" id="indonesia">
-                        <img class="icon" src="country_icons/Indonesia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Indonesia.png" alt="">
                         <span>Индонезия</span>
                     </div>
 
                     <div class="country" id="kazakhstan">
-                        <img class="icon" src="country_icons/Kazakhstan.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Kazakhstan.png" alt="">
                         <span>Казахстан</span>
                     </div>
 
                     <div class="country" id="myanmar">
-                        <img class="icon" src="country_icons/Myanmar.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Myanmar.png" alt="">
                         <span>Мьянма</span>
                     </div>
 
                     <div class="country" id="namibia">
-                        <img class="icon" src="country_icons/Namibia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Namibia.png" alt="">
                         <span>Намибия</span>
                     </div>
                             
                     <div class="country" id="rwanda">
-                        <img class="icon" src="country_icons/Rwanda.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Rwanda.png" alt="">
                         <span>Руанда</span>
                     </div>
 
                     <div class="country" id="uzbekistan">
-                        <img class="icon" src="country_icons/Uzbekistan.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Uzbekistan.png" alt="">
                         <span>Узбекистан</span>
                     </div>
                         
@@ -120,7 +135,7 @@
             <input id="email" name="email" type="email" placeholder="E-mail">
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Неправильный формат электронной почты</span>
             </div>
         </div>
@@ -130,7 +145,7 @@
             <input id="teamName" name="teamName" type="text" placeholder="Название команды">
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Название команды обязательно для заполнения</span>
             </div>
         </div>
@@ -139,56 +154,56 @@
         <div class="validInputField">
             <label id="countryLabel">Страна</label>
             <div id="countryContainer">
-                <img class="icon" src="country_icons/Bolivia.png" alt="" id="choosenCountryIcon2">
+                <img class="icon" src="static/images/country_icons/Bolivia.png" alt="" id="choosenCountryIcon2">
                 <input type="text" name="" id="countryNameInput" readonly value="Боливия" size = "7">
-                <img src="Arrow 1 (Stroke).png" alt="Выбрать" id="arrow2">
+                <img src="static/images/unique_icons/Arrow 1 (Stroke).png" alt="Выбрать" id="arrow2">
                 
                 
             </div>
             <div id="countriesListContainer">
                 <div id="countriesList">
                     <div class="country2" id="bolivia2">
-                        <img class="icon" src="country_icons/Bolivia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Bolivia.png" alt="">
                         <span>Боливия</span>
                     </div>
 
                     <div class="country2" id="brazilia2">
-                        <img class="icon" src="country_icons/Brazilia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Brazilia.png" alt="">
                         <span>Бразилия</span>
                     </div>
 
                     <div class="country2" id="vengria2">
-                        <img class="icon" src="country_icons/Vengria.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Vengria.png" alt="">
                         <span>Венгрия</span>
                     </div>
 
                     <div class="country2" id="indonesia2">
-                        <img class="icon" src="country_icons/Indonesia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Indonesia.png" alt="">
                         <span>Индонезия</span>
                     </div>
 
                     <div class="country2" id="kazakhstan2">
-                        <img class="icon" src="country_icons/Kazakhstan.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Kazakhstan.png" alt="">
                         <span>Казахстан</span>
                     </div>
 
                     <div class="country2" id="myanmar2">
-                        <img class="icon" src="country_icons/Myanmar.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Myanmar.png" alt="">
                         <span>Мьянма</span>
                     </div>
 
                     <div class="country2" id="namibia2">
-                        <img class="icon" src="country_icons/Namibia.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Namibia.png" alt="">
                         <span>Намибия</span>
                     </div>
                             
                     <div class="country2" id="rwanda2">
-                        <img class="icon" src="country_icons/Rwanda.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Rwanda.png" alt="">
                         <span>Руанда</span>
                     </div>
 
                     <div class="country2" id="uzbekistan2">
-                        <img class="icon" src="country_icons/Uzbekistan.png" alt="">
+                        <img class="icon" src="static/images/country_icons/Uzbekistan.png" alt="">
                         <span>Узбекистан</span>
                     </div>
                         
@@ -202,7 +217,7 @@
             <input id="foreignPassport" name="foreignPassport" type="text" placeholder="Номер заграничного паспорта">
             <hr>
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Номер заграничного паспорта обязателен для заполнения</span>
             </div>
         </div>
@@ -212,15 +227,15 @@
             <input class="warn" id="foreignPassportLifespan" name="foreignPassportLifespan" type="date">
             <hr class = "warn">
             <div class="warningMessage">
-                <img src="WarnIcon.png" class="warnIcon" alt="">
+                <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                 <span class="warn">Рекомендуемый срок действия загранпаспорта должен быть не менее 6 месяцев на момент въезда в Россию</span>
             </div>
         </div>
 
 
         <div id="haveVisaContainer">
-            <img id="iHave" style="display: none;" src="Yes.png" alt="Есть">
-            <img id="iHaveNo" src="No.png" alt="Нету">
+            <img id="iHave" style="display: none;" src="static/images/unique_icons/Yes.png" alt="Есть">
+            <img id="iHaveNo" src="static/images/unique_icons/No.png" alt="Нету">
             <span id="iHaveVisaLabel">У меня есть виза</span>
             <input type="checkbox"  name="haveVisa" id="haveVisaHiddenInput">
         </div>
@@ -230,11 +245,11 @@
                 <div class="emptyInputField">
                     <div class="emptyFileInput">
                         <input type="file" name="foreignPassport" id="foreignPassportInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
-                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <img src="static/images/unique_icons/fileIcon.png" alt="" class="fileIcon">
                         <span>Прикрепить фото заграничного паспорта</span>
                     </div>
                     <div class="warningMessage">
-                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                         <span class="warn">Необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
                     </div>
                 </div>
@@ -245,11 +260,11 @@
                 <div class="emptyInputField">
                     <div class="emptyFileInput">
                         <input type="file" name="russianPassport" id="russianPassportInput" class="fileInput" accept=".png, .jpg, .webp, .pdf, .jpeg">
-                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <img src="static/images/unique_icons/fileIcon.png" alt="" class="fileIcon">
                         <span>Прикрепить фото ID (или российского паспорта)</span>
                     </div>
                     <div class="warningMessage">
-                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                         <span class="warn">Необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
                     </div>
                 </div>
@@ -260,11 +275,11 @@
                 <div class="validInputField">
                     <div class="emptyFileInput">
                         <input type="file" name="visa" id="visaInput" class="fileInput"  accept=".png, .jpg, .webp, .pdf, .jpeg">
-                        <img src="fileIcon.png" alt="" class="fileIcon">
+                        <img src="static/images/unique_icons/fileIcon.png" alt="" class="fileIcon">
                         <span>Прикрепить фото визы</span>
                     </div>
                     <div class="warningMessage">
-                        <img src="WarnIcon.png" class="warnIcon" alt="">
+                        <img src="static/images/unique_icons/WarnIcon.png" class="warnIcon" alt="">
                         <span class="warn">При наличии визы необходимо прикрепить файл с расширением .png/ .jpg/ .webp/ .pdf и весом не более 5 МБайт</span>
                     </div>
                 </div>
@@ -274,10 +289,10 @@
 
 
         <div id="backAndNextContainer">
-            <a href="/back"><img src="BackButton.png" alt="" id="backButton"></a>
+            <a href="/back"><img src="static/images/unique_icons/BackButton.png" alt="" class="arrowButton"></a>
             
             <div id="nextContainer">
-                <img src="NextButton.png" alt="Далее" id="nextButton">
+                <div id="nextButton" >ДАЛЕЕ</div>
                 <input type="submit" id="submit" value="">
             </div>
             
@@ -287,13 +302,58 @@
         <div id="agreement"><a href="/agreement" style="text-decoration: none;"><span>Нажимая кнопку «Далее», я даю согласие на обработку предоставленных мною персональных данных, использование фото и видео с моим изображением 
 для редакционных целей и заявляю о своем согласии с правилами защиты информации, изложенными в Федеральном законе от 27 июля 2006 года № 152-ФЗ 
 «О персональных данных». </span></a></div>
-        
-
     </form>
-    <script src="validation.js"></script>
-    <script src="script.js"></script>
 
+    <footer>
+        <table>
+            <tr>
+                <td rowspan="3"><img id="hackatomLogo" src="static/images/company_icons/Hackatom.png" alt=""></td>
+                <td><a href="/hackatom">HACKATOM - 2025</a></td>
+                <td><div id="usefullResourciesLabel">
+                    <span style="white-space: nowrap;">ПОЛЕЗНЫЕ РЕСУРСЫ</span>
+                    <hr>
+                </div></td>
+            </tr>
+            <tr>
+                <td ><a href="/news">НОВОСТИ</a></td>
+                <td rowspan="2">
+                    <table id="innerTable">
+                        <tr>    
+                            <td><a href="/rosatom"><img id="rosatomLogo"  src="static/images/company_icons/Rosatom_Horizontal_white.png" alt=""></a></td>
+                            <td><a href="/global_atomic_quiz"><img id="GAQLogo"  src="static/images/company_icons/GAQ.png" alt=""></a></td>
+                            <td><a href="/nuclear_education"><img id="NELogo"  src="static/images/company_icons/NUCLEAR EDUCATION IN RUSSIA.png" alt=""></a></td>
+                        </tr>
 
+                        <tr>    
+                            <td><a href="/icebreaker"><img id="iceBreakerLogo"  src="static/images/company_icons/IceBreaker.png" alt=""></a></td>
+                            <td><a href="/newsletter"><img id="newsletterLogo"  src="static/images/company_icons/NEWSLETTER.png" alt=""></a></td>
+                            <td><a href="/obninsktech"><img id="obninsktechLogo"  src="static/images/company_icons/Obninsktech.png" alt=""></a></td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td><a href="/faq">FAQ</a></td></tr>
+            <tr><td colspan="4"><hr></td></tr>
+            <tr>
+                <td class="littleText"><a href="/globalhackatom">© 2025 Global HackAtom</a></td>
+                <td class="littleText"><a href="/polytic">Политика конфиденциальности</a></td>
+                <td>
+                    <div id="rosatomAndVeonix">
+                        <a href="/rosatomGlobal"><img id="rosatomGlobal" src="static/images/company_icons/RosatomGlobal.png" alt=""></a>
+                        <div id="angle">
+                            <span class="littleText" id="veonixLink">Сделано в <a href="veonix.ru">Veonix.ru</a></span>
+                            <a href="#header"><img class="arrowButton" id="toTopButton" src="static/images/unique_icons/BackButton.png" alt=""></a>
+                        </div>
+                        
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </footer>
     
+    <script src="static/js/validation.js"></script>
+    <script src="static/js/main.js"></script>
+
 </body>
 </html>
