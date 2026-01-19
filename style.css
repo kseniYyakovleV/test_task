@@ -1,0 +1,697 @@
+@font-face {
+    font-family: 'Onder';
+    src: url(static/fonts/onder/ONDER-REGULAR.TTF);
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url(static/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+}
+
+
+
+body {
+    background-color: #182540;
+    font-family: 'Ubuntu Mono';
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+hr.focused_field {
+    opacity: 100% !important;
+    color: white !important;
+}
+
+#header {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#header div {
+    flex: 1;
+}
+
+
+/* Header icons */
+
+#header_icons {    
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media(min-width: 900px) {
+    #header_icons {
+        min-width: 0;
+        max-width: 500px;
+    }
+
+    #header_links {
+        max-width: 450px;
+        padding-left: 60px;
+    }
+}
+
+
+#header_icons a {
+    max-width: 25%;
+    padding: 5px;
+}
+
+#header_icons a img {
+    width: 100%;
+    min-width: 80px;
+    max-width: 120px;
+}
+
+
+
+/* Header links */
+
+#header_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#header_links a, #header_links span {
+    padding: 5px;
+    font-size: clamp(0.3rem, 3.5vw, 16px);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#header_links a:hover {
+    color: #D5FF6B;
+}
+
+
+
+span#registration_link {
+    background-color: #D5FF6B;
+    color: black;
+    border-radius: 17px;
+    padding: 10px 25px 10px 25px;
+}
+
+
+#registration_large_title {
+    margin-top: calc(10vw + 40px);
+    font-weight: 500;
+    font-size: 3.5vw;
+    text-align: center;
+    font-family: 'Onder';
+    color: transparent;
+	background-clip: text;
+
+	background-image: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background-image: linear-gradient(52.1deg, #8E4A7B 3.08%, #4A8CB1 31.27%, #6FB7B0 59.46%, #D3ECA6 87.65%, #A96C1E 115.84%);
+    background-image: linear-gradient(53.43deg, #B21A88 3%, #0997E7 27.59%, #00C7B3 50.47%, #D5FF6B 74.03%);
+    background-image: linear-gradient(54.71deg, #B21A88 2.92%, #0997E7 36.52%, #00C7B3 67.8%, #D5FF6B 100%);
+}
+
+#user_form {
+    color: white;
+}
+
+#main_information_label {
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(1vw + 10px);
+
+}
+
+
+
+
+
+
+/* Registration form */
+
+#registration_form {
+    margin: 0 30px 0 30px;
+    max-width: 400px;
+    width: 37.5vw;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+/* General styles */
+
+.form_input_section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form_input_section input, .form_input_section label {
+    cursor: pointer;
+}
+
+.wrong_data_warning {
+    cursor:auto !important;
+}
+
+
+
+.form_input_section:hover hr, .valid_input_section:hover hr, .not_empty_input_section:hover hr {
+    color: white !important;
+    opacity: 100% !important;
+}
+
+
+.form_input_section label {
+    font-size: calc(0.2vw + 9px);
+}
+
+.form_input_section input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: clamp(13px, 3.4vw, 16px);
+    font-family: 'Ubuntu Mono';
+    color: #00C7B3;
+}
+
+.form_input_section input::placeholder {
+    color: white;
+}
+
+.form_input_section hr, .valid_input_section hr, .not_empty_input_section hr {
+    width: 100%;
+    color: white;
+    opacity: 10%;
+}
+
+.wrong_data_warning {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: #FF5658;
+}
+
+#wrong_phone_number {
+    margin-bottom: 10px;
+}
+
+.wrong_data_warning_icon, .visa_checkbox_item, .file_icon {
+    min-width: 12px;
+    max-width: 16px;
+    width: 3vw;
+    margin-right: 7px;
+}
+
+/* Particular styles */
+
+.invalid_input_section .form_input_section hr {
+  color: #FF5658;
+  opacity: 100%;
+}
+
+.empty_valid_input_section .wrong_data_warning {
+    display: none;
+}
+
+
+
+.not_empty_valid_input_section .add_file_container {
+    opacity: 0.5;
+}
+
+.not_empty_valid_input_section .wrong_data_warning {
+    display: none;
+ }
+
+.not_empty_invalid_input_section .add_file_container {
+    opacity: 0.5;
+}
+
+.not_empty_invalid_input_section .wrong_data_warning {
+    display: block;
+}
+
+.valid_input_section .wrong_data_warning {
+    display: none;
+}
+
+.valid_input_section .add_file_container{
+    opacity: 0.5;
+}
+
+
+
+
+/* Country input */
+.country_input_container, .phone_number_input_container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#area_for_list_droping {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.country_item {
+    font-size: clamp(13px, 3.4vw, 16px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#country_input, .phone_number_input_container .arrow_icon {
+    margin: 0 8px 0 8px;
+}
+
+#phone_number_input {
+    width: 100%;
+}
+
+.country_icon {
+    width: 20px;
+    height: 14px;
+}
+
+.country_item .country_icon {
+    margin: 4px 10px 4px 0px;
+}
+
+.arrow_icon {
+    height: 8px;
+}
+
+.country_list_container {
+    display: none;
+}
+
+.opened_list .arrow_icon {
+    rotate: 180deg;
+}
+
+.opened_list .country_list_container {
+    display: block;
+}
+
+.opened_list hr {
+    color: white;
+    opacity: 100%;
+}
+
+
+/* Visa styles */
+#visa_input_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.visa_checkbox_item {
+    position: absolute;
+}
+
+#visa_input_container label {
+    margin-left: clamp(20px, 4vw, 25px);
+    font-size: clamp(10px, 2vw, 12px);
+}
+
+
+/* Files styles */
+.add_file_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add_file_container label {
+    font-size: clamp(11px, 2vw, 12px);
+}
+
+.hidden-input {
+    display: none;
+}
+
+#files_section {
+    margin-top: 10px;
+}
+
+#files_section .wrong_data_warning {
+    margin-top: 10px;
+}
+
+.hidden_file_input_section {
+    display: none;
+}
+
+/* Form bottom styles */
+#button_container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#back_button_icon {
+    position: absolute;
+    min-height: 46px;
+    max-height: 50px;
+    height: calc(3vw + 32px);
+}
+
+#next_button {
+    padding: 15px 70px 15px 70px;
+    border: 1px solid white;
+    border-radius:400px;
+    font-size: clamp(14px, 3vw, 18px);
+    text-align: center;
+    width: 5vw;
+    min-width: 40px;
+    max-width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#next_button:hover {
+    background-color: #00C7B3;
+    border-color: #00C7B3;
+}
+
+#agreement_link {
+    margin-top: 20px;
+    text-align: center;
+    
+    font-size: clamp(9px, 2.3vw, 11px);
+    opacity: 50%;
+}
+
+#agreement_link a {
+    text-decoration: none;
+}
+
+
+
+/* Footer */
+
+footer {
+    margin-top: calc(9vw + 5px);
+    padding: calc(9vw + 5px) 5% calc(5vw + 10px) 5%;
+    background-image: linear-gradient(180deg, #182540 0%, #000000 100%);
+}
+
+footer hr {
+    width: 100%;
+    color: white;
+    opacity: 10%;
+}
+
+@media (max-width: 880px) {
+    #wide_display_footer {
+        display: none;
+    }
+}
+
+@media (min-width: 880px) {
+    #narrow_display_footer {
+        display: none;
+    }
+}
+
+
+#narrow_display_footer {
+    margin: 20px calc(3vw);
+}
+
+#wide_display_footer table {
+    width: 100%;
+}
+
+
+
+/* Wild display footer */
+
+#hackatomLogo {
+    width: 229px;
+    height: 91px;
+}
+
+#usefullResourciesLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#usefullResourciesLabel hr {
+    height: 0px;
+}
+
+#usefullResourciesLabel, #innerTable tr {
+    height: 40px;
+}
+
+#helpfullResourcies {
+    white-space: nowrap;
+    margin-right: 10px;
+    color: white;
+}
+
+#innerTable {
+    width: 100%;
+}
+
+#rosatomLogo {
+    width: 104px;
+    height: 21px;
+}
+
+#GAQLogo {
+    width: 104px;
+    height: 31px;
+}
+
+#NELogo {
+    width: 104px;
+    height: 19px;
+}
+
+#iceBreakerLogo {
+    width: 104px;
+    height: 24px;
+}
+
+#newsletterLogo {
+    width: 104px;
+    height: 11px;
+}
+
+#obninsktechLogo {
+    width: 104px;
+    height: 11px;
+}
+
+.littleText {
+    font-size: 12px;
+}
+
+#rosatomAndVeonix {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#rosatomGlobal {
+    height: 35px;
+}
+
+#angle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#veonixLink {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#veonixLink a:hover {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+
+
+.arrowButton {
+    width: 46px;
+    height: 46px;
+}
+
+
+
+
+#toTopButton {
+    cursor: pointer;
+    rotate: 90deg;
+}
+
+
+
+
+
+
+
+
+
+
+/* Narrow display footer */
+/* Footer global hackatom icon and text links */
+
+#global_hackatom_large_icon_and_text_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#global_hackatom_large_icon_and_text_links a {
+    width: 50%;
+}
+
+#global_hackatom_large_icon_and_text_links a img {
+    width: 100%;
+}
+
+.footer_text_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: clamp(12px, 2.5vw, 17px);
+}
+
+.footer_text_links a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.footer_text_links a:hover {
+    color: #D5FF6B;
+}
+
+
+/* Narrow footer helpfull resourcies */
+
+.helpfull_resourcies_container {
+    margin: 20px;
+    margin: 20px 0% 20px 0%;
+}
+
+.helpfull_resourcies_label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: clamp(10px, 3vw, 20px)
+}
+
+.helpfull_resourcies_label span {
+    white-space: nowrap;
+    margin-right: 10px;
+    color: white;
+    font-size: clamp(0.3rem, 3.5vw, 16px);
+}
+
+
+.helpfull_resourcies_icons_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.helpfull_resourcies_icons_line a {
+    width: 25%;
+    display: block;
+}
+
+.helpfull_resourcies_icons_line a img {
+    width: 100%;
+}
+
+
+/* Narrow footer bottom */
+
+#footer_bottom {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    font-size: clamp(6px, 2.5vw, 14px);
+    color: white;
+}
+
+#footer_bottom a {
+    text-decoration: none;
+}
+
+#footer_bottom a:hover {
+    color: #D5FF6B;
+}
+
+#footer_bottom div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#rosatom_global_footer_icon {
+    min-height: 30px;
+    max-height: 40px;
+    height: calc(3vw + 22px);
+}
+
+#footer_angle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#veonix_link {
+    margin-right: 2vw;
+}
+
+#veonix_link:hover {
+    color: white !important;
+    text-decoration: underline;
+}
+
+#to_top_button_img {
+    min-height: 46px;
+    max-height: 50px;
+    height: calc(3vw + 32px);
+    rotate: 90deg;
+}
+
+

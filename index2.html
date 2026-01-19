@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="header_icons">
+            <a href="/rosatom"><img src="static/images/company_icons/Rosatom_Horizontal_white.png" alt="Логотип Rosatom"></a>
+            <a href="/years"><img src="static/images/company_icons/Years_of_russian_nuclear_industry.png" alt="Логотип 80 years of russian nuclear industry"></a>
+            <a href="/hackatom"><img src="static/images/company_icons/Hackatom.png" alt="Логотип Global Hackatom"></a>
+            <a href="/future"><img src="static/images/company_icons/Energy_of_the_future.png" alt="Логотип Energy of the future"></a>
+        </div>
+
+        <div id="header_links">
+            <a href="/hackatom">HACKATOM - 2025</a>
+            <a href="/news">Новости</a>
+            <a href="/faq">FAQ</a>
+            <a href="/en">EN</a>
+            <span id="registration_link">РЕГИСТРАЦИЯ</a>
+        </div>
+    </header> 
+
+
+    <h1 id="registration_large_title">РЕГИСТРАЦИЯ</h1>
+
+
+    <form id="registration_form" action="/new_user" method="post">
+        <p id="main_information_label">Основная информация</p>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name_input" placeholder="Имя">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат информации">
+                    <span>Поле обязательно для заполнения</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="lastname">Фамилия</label>
+                <input type="text" name="lastname" id="lastname_input" placeholder="Фамилия">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат информации">
+                    <span>Поле обязательно для заполнения</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="fathername">Отчество</label>
+                <input type="text" data-is-optional="true" name="fathername" id="fathername_input" placeholder="Отчество (при наличии)">
+                <hr>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="birthday_date">Дата рождения</label>
+                <input type="date" name="birthday_date" id="birthday_date_input">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат информации">
+                    <span id="min_age_warning_message">Поле обязательно для заполнения</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="closed_list">
+                <div id="phone_number" class="form_input_section">
+                    <label for="phone_number">Номер телефона</label>
+                    <div class="phone_number_input_container">
+                        <div id="area_for_list_droping">
+                            <img id="coutry_list_country_icon" class="country_icon" src="static/images/country_icons/Bolivia.png" alt="Выбранная страна">
+                            <img class="arrow_icon" src="static/images/unique_icons/Arrow 1 (Stroke).png" alt="Выбрать страну">
+                        </div>
+                        <input type="tel" name="phone_number" id="phone_number_input" value="+7" size = "7">
+                        <input type="hidden" name="country_for_phone_number" id="country_for_phone_number_input">
+                    </div>
+                </div>
+                
+                    
+                <div class="country_list_container">
+                    <div class="country_list">
+                        <div class="country_item">
+                            <img id="country_icon" class="country_icon" src="static/images/country_icons/Bolivia.png" alt="">
+                            <span>Боливия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Brazilia.png" alt="Флаг Бразилии">
+                            <span>Бразилия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Vengria.png" alt="Флаг Вегрии">
+                            <span>Венгрия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Indonesia.png" alt="Флан Индонезии">
+                            <span>Индонезия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Kazakhstan.png" alt="Флаг Казахстана">
+                            <span>Казахстан</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Myanmar.png" alt="Флаг Мьянмы">
+                            <span>Мьянма</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Namibia.png" alt="Флаг Намибия">
+                            <span>Намибия</span>
+                        </div>       
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Rwanda.png" alt="Флаг Руанды">
+                            <span>Руанда</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Uzbekistan.png" alt="Флаг Узбекистана">
+                            <span>Узбекистан</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="wrong_phone_number" class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат информации">
+                    <span>Неверный формат номера телефона</span>
+                </div>
+            </div>
+        </div>
+            
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email_input" placeholder="Email">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат ввода">
+                    <span>Неверный формат электронной почты</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="team_name">Название команды</label>
+                <input type="text" name="team_name" id="team_name_input" placeholder="Название команды">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат ввода">
+                    <span>Поле обязательно для заполнения</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="valid_input_section">
+            <div class="closed_list">
+                <div id="country" class="form_input_section">
+                    <label for="country">Страна</label>
+                    <div class="country_input_container">
+                        <img class="country_icon" src="static/images/country_icons/Bolivia.png" alt="Выбранная страна">
+                        <input type="text" name="country" id="country_input" readonly value="Боливия" size = "10">
+                        <img class="arrow_icon" src="static/images/unique_icons/Arrow 1 (Stroke).png" alt="Выбрать страну">
+                    </div>
+                </div>
+                
+                
+                <div class="country_list_container">
+                    <div class="country_list">
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Bolivia.png" alt="Флаг Боливии">
+                            <span>Боливия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Brazilia.png" alt="Флаг Бразилии">
+                            <span>Бразилия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Vengria.png" alt="Флаг Вегрии">
+                            <span>Венгрия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Indonesia.png" alt="Флан Индонезии">
+                            <span>Индонезия</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Kazakhstan.png" alt="Флаг Казахстана">
+                            <span>Казахстан</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Myanmar.png" alt="Флаг Мьянмы">
+                            <span>Мьянма</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Namibia.png" alt="Флаг Намибия">
+                            <span>Намибия</span>
+                        </div>       
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Rwanda.png" alt="Флаг Руанды">
+                            <span>Руанда</span>
+                        </div>
+                        <div class="country_item">
+                            <img class="country_icon" src="static/images/country_icons/Uzbekistan.png" alt="Флаг Узбекистана">
+                            <span>Узбекистан</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="foreign_passport">Номер заграничного паспорта</label>
+                <input type="text" name="foreign_passport" id="foreign_passport_input" placeholder="Номер заграничного паспорта">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат ввода">
+                    <span>Поле обязательно для заполнения</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="valid_input_section">
+            <div class="form_input_section">
+                <label for="foreign_passport_validity_period">Срок действия заграничного паспорта</label>
+                <input type="date" name="foreign_passport_validity_period" id="foreign_passport_validity_period_input">
+                <hr>
+                <div class="wrong_data_warning">
+                    <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Неверный формат ввода">
+                    <span id="passport_validity_period_warning_message">Срок действия заграничного паспорта должен быть не менее 6 месяцев с текущего момента</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="files_section">
+            <div class="valid_input_section">
+                <div class="form_input_section">
+                    <div id="visa_input_container">
+                        <img id="have_no_visa_icon" class="visa_checkbox_item" src="static/images/unique_icons/No.png" alt="Нет визы">
+                        <img id="have_visa_icon" class="visa_checkbox_item" src="static/images/unique_icons/Yes.png" alt="Есть виза">
+                        <label for="have_visa">У меня есть виза</label>
+                        <input class="hidden-input" type="checkbox" name="have_visa" id="have_visa_input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty_valid_input_section">
+                <div class="form_input_section">
+                    <div class="add_file_container">
+                        <img class="file_icon" src="static/images/unique_icons/fileIcon.png" alt="Выбрать фото заграничного паспорта">
+                        <label for="foreign_passport_photo">Прикрепить фото заграничного паспорта</label>
+                        <input class="hidden-input" type="file" multiple name="foreign_passport_photo" id="foreign_passport_photo_input" accept="image/*, .pdf">
+                    </div>
+                    <div class="wrong_data_warning">
+                        <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Файл слишком большой">
+                        <span>Должен быть добавлен как минимум один файл весом не более 5 МБайт</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty_valid_input_section">
+                <div class="form_input_section">
+                    <div class="add_file_container">
+                        <img class="file_icon" src="static/images/unique_icons/fileIcon.png" alt="Выбрать фото ID (или российского паспорта)">
+                        <label for="id_or_russian_passport_photo">Прикрепить фото заграничного ID (или российского паспорта)</label>
+                        <input class="hidden-input" type="file" multiple name="id_or_russian_passport_photo" id="id_or_russian_passport_photo_input" accept="image/*, .pdf">
+                    </div>
+                    <div class="wrong_data_warning">
+                        <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Файл слишком большой">
+                        <span>Должен быть добавлен как минимум один файл весом не более 5 МБайт</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty_valid_input_section">
+                <div class="form_input_section">
+                    <div class="add_file_container">
+                        <img class="file_icon" src="static/images/unique_icons/fileIcon.png" alt="Выбрать фото визы">
+                        <label for="visa_photo">Прикрепить фото визы</label>
+                        <input class="hidden-input" type="file" multiple name="visa_photo" id="visa_photo_input" accept="image/*, .pdf">
+                    </div>
+                    <div class="wrong_data_warning">
+                        <img class="wrong_data_warning_icon" src="static/images/unique_icons/WarnIcon.png" alt="Файл слишком большой">
+                        <span>Должен быть добавлен как минимум один файл весом не более 5 МБайт</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="button_container">
+            <a href="/back"><img id="back_button_icon" src="static/images/unique_icons/BackButton.png" alt="Вернуться назад"></a>
+            <span id="next_button">ДАЛЕЕ</span>
+        </div>
+
+        <div id="agreement_link"><a href="/agreement"><span>Нажимая кнопку «Далее», я даю согласие на обработку предоставленных мною персональных данных, использование фото и видео с моим изображением для редакционных целей и заявляю о своем согласии с правилами защиты информации, изложенными в Федеральном законе от 27 июля 2006 года № 152-ФЗ «О персональных данных».</span></a></div>
+
+    </form>
+
+
+    <footer>
+        <div id="wide_display_footer">
+            <table>
+                <tr>
+                    <td rowspan="3"><img id="hackatomLogo" src="static/images/company_icons/Hackatom.png" alt=""></td>
+                    <td><a href="/hackatom">HACKATOM - 2025</a></td>
+                    <td><div id="usefullResourciesLabel">
+                        <span id="helpfullResourcies">ПОЛЕЗНЫЕ РЕСУРСЫ</span>
+                        <hr>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td ><a href="/news">НОВОСТИ</a></td>
+                    <td rowspan="2">
+                        <table id="innerTable">
+                            <tr>    
+                                <td><a href="/rosatom"><img id="rosatomLogo"  src="static/images/company_icons/Rosatom_Horizontal_white.png" alt=""></a></td>
+                                <td><a href="/global_atomic_quiz"><img id="GAQLogo"  src="static/images/company_icons/GAQ.png" alt=""></a></td>
+                                <td><a href="/nuclear_education"><img id="NELogo"  src="static/images/company_icons/NUCLEAR EDUCATION IN RUSSIA.png" alt=""></a></td>
+                            </tr>
+
+                            <tr>    
+                                <td><a href="/icebreaker"><img id="iceBreakerLogo"  src="static/images/company_icons/IceBreaker.png" alt=""></a></td>
+                                <td><a href="/newsletter"><img id="newsletterLogo"  src="static/images/company_icons/NEWSLETTER.png" alt=""></a></td>
+                                <td><a href="/obninsktech"><img id="obninsktechLogo"  src="static/images/company_icons/Obninsktech.png" alt=""></a></td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td><a href="/faq">FAQ</a></td></tr>
+                <tr><td colspan="4"><hr></td></tr>
+                <tr>
+                    <td class="littleText"><a href="/globalhackatom">© 2025 Global HackAtom</a></td>
+                    <td class="littleText"><a href="/polytic">Политика конфиденциальности</a></td>
+                    <td>
+                        <div id="rosatomAndVeonix">
+                            <a href="/rosatomGlobal"><img id="rosatomGlobal" src="static/images/company_icons/RosatomGlobal.png" alt=""></a>
+                            <div id="angle">
+                                <span class="littleText" id="veonixLink">Сделано в <a href="https://veonix.ru">Veonix.ru</a></span>
+                                <a href="#header"><img class="arrowButton" id="toTopButton" src="static/images/unique_icons/BackButton.png" alt=""></a>
+                            </div>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+        <div id="narrow_display_footer">
+            <div id="global_hackatom_large_icon_and_text_links">
+                <a href="/global_hackatom"><img src="static/images/company_icons/Hackatom.png" alt="Большой логотип Hackatom"></a>
+                <div class="footer_text_links">
+                    <a href="/hackatom"><span>HACKATOM - 2025</span></a>
+                    <a href="/news"><span>HОВОСТИ</span></a>
+                    <a href="/faq"><span>FAQ</span></a>
+                </div>
+            </div>
+
+            <div class="helpfull_resourcies_container">
+                <div class="helpfull_resourcies_label"><span>Полезные ресурсы</span><hr></div>
+                <div class="helpfull_resourcies_icons_line">
+                    <a href="/rosatom"><img src="static/images/company_icons/Rosatom_Horizontal_white.png" alt="Логотип Rosatom"></a>
+                    <a href="/global_atomic_quiz"><img src="static/images/company_icons/GAQ.png" alt="Логотип Global atomic quiz"></a>
+                    <a href="/nuclear_education"><img src="static/images/company_icons/NUCLEAR EDUCATION IN RUSSIA.png" alt="Логотип Nuclear education in Russia"></a>
+                </div>
+                <div class="helpfull_resourcies_icons_line">
+                    <a href="/icebreaker"><img src="static/images/company_icons/IceBreaker.png" alt="Логотип"></a>
+                    <a href="/newsletter"><img src="static/images/company_icons/NEWSLETTER.png" alt=""></a>
+                    <a href="/obninsktech"><img src="static/images/company_icons/Obninsktech.png" alt=""></a>
+                </div>
+            </div>
+            <hr>
+            <div id="footer_bottom">
+                <div>
+                    <a href="/privacy_policy"><span>Политика конфиденциальности</span></a>
+                    <a href="/rosatom_global"><img id="rosatom_global_footer_icon" src="static/images/company_icons/RosatomGlobal.png" alt="Логотип Rosatom Global"></a>
+                </div>
+                <div>
+                    <div><a href="/global_hackatom"><span>© 2025 Global HackAtom</span></a></div>
+                    <div id="footer_angle">
+                        <div><span>Сделано в <a id="veonix_link" href="https://veonix.ru">Veonix.ru</a></span></div>
+                        <a href="#header"><img id="to_top_button_img" src="static/images/unique_icons/BackButton.png" alt="Наверх"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
