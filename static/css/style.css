@@ -1,28 +1,115 @@
 @font-face {
     font-family: 'Onder';
-    src: url(../fonts/onder/ONDER-REGULAR.TTF);
+    src: url(static/fonts/onder/ONDER-REGULAR.TTF);
 }
 
 @font-face {
     font-family: 'Ubuntu Mono';
-    src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
+    src: url(static/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
 }
+
 
 
 body {
     background-color: #182540;
-}
-
-form {
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
     font-family: 'Ubuntu Mono';
+    margin: 0;
 }
 
-h1 {
+a {
+    color: white;
+}
+
+hr.focused_field {
+    opacity: 100% !important;
+    color: white !important;
+}
+
+#header {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#header div {
+    flex: 1;
+}
+
+
+/* Header icons */
+
+#header_icons {    
+    min-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media(min-width: 900px) {
+    #header_icons {
+        min-width: 0;
+        max-width: 500px;
+    }
+
+    #header_links {
+        max-width: 450px;
+        padding-left: 60px;
+    }
+}
+
+
+#header_icons a {
+    max-width: 25%;
+    padding: 5px;
+}
+
+#header_icons a img {
+    width: 100%;
+    min-width: 80px;
+    max-width: 120px;
+}
+
+
+
+/* Header links */
+
+#header_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#header_links a, #header_links span {
+    padding: 5px;
+    font-size: clamp(0.3rem, 3.5vw, 16px);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#header_links a:hover {
+    color: #D5FF6B;
+}
+
+
+
+span#registration_link {
+    background-color: #D5FF6B;
+    color: black;
+    border-radius: 17px;
+    padding: 10px 25px 10px 25px;
+}
+
+
+#registration_large_title {
+    margin-top: calc(10vw + 40px);
     font-weight: 500;
-    font-size: 50px;
+    font-size: 3.5vw;
     text-align: center;
     font-family: 'Onder';
     color: transparent;
@@ -34,430 +121,360 @@ h1 {
     background-image: linear-gradient(54.71deg, #B21A88 2.92%, #0997E7 36.52%, #00C7B3 67.8%, #D5FF6B 100%);
 }
 
-p {
-    font-weight: 400;
-    font-size: 20px;
+#user_form {
     color: white;
-    text-align: center;
 }
 
-input {
+#main_information_label {
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(1vw + 10px);
+
+}
+
+
+
+
+
+
+/* Registration form */
+
+#registration_form {
+    margin: 0 30px 0 30px;
+    max-width: 400px;
+    width: 37.5vw;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+/* General styles */
+
+.form_input_section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form_input_section input, .form_input_section label {
+    cursor: pointer;
+}
+
+.wrong_data_warning {
+    cursor:auto !important;
+}
+
+
+
+.form_input_section:hover hr, .valid_input_section:hover hr, .not_empty_input_section:hover hr {
+    color: white !important;
+    opacity: 100% !important;
+}
+
+
+.form_input_section label {
+    font-size: calc(0.2vw + 9px);
+}
+
+.form_input_section input {
     background-color: transparent;
     border: none;
     outline: none;
-    color: #00C7B3;
     font-weight: 400;
-    font-size: 14px;
+    font-size: clamp(13px, 3.4vw, 16px);
+    font-family: 'Ubuntu Mono';
+    color: #00C7B3;
 }
 
-hr {
+.form_input_section input::placeholder {
+    color: white;
+}
+
+.form_input_section hr, .valid_input_section hr, .not_empty_input_section hr {
+    width: 100%;
     color: white;
     opacity: 10%;
+}
+
+.wrong_data_warning {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: #FF5658;
+}
+
+#wrong_phone_number {
+    margin-bottom: 10px;
+}
+
+.wrong_data_warning_icon, .visa_checkbox_item, .file_icon {
+    min-width: 12px;
+    max-width: 16px;
+    width: 3vw;
+    margin-right: 7px;
+}
+
+/* Particular styles */
+
+.invalid_input_section .form_input_section hr {
+  color: #FF5658;
+  opacity: 100%;
+}
+
+.empty_valid_input_section .wrong_data_warning {
+    display: none;
+}
+
+
+
+.not_empty_valid_input_section .add_file_container {
+    opacity: 0.5;
+}
+
+.not_empty_valid_input_section .wrong_data_warning {
+    display: none;
+ }
+
+.not_empty_invalid_input_section .add_file_container {
+    opacity: 0.5;
+}
+
+.not_empty_invalid_input_section .wrong_data_warning {
+    display: block;
+}
+
+.valid_input_section .wrong_data_warning {
+    display: none;
+}
+
+.valid_input_section .add_file_container{
+    opacity: 0.5;
+}
+
+
+
+
+/* Country input */
+.country_input_container, .phone_number_input_container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#area_for_list_droping {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.country_item {
+    font-size: clamp(13px, 3.4vw, 16px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#country_input, .phone_number_input_container .arrow_icon {
+    margin: 0 8px 0 8px;
+}
+
+#phone_number_input {
     width: 100%;
 }
 
-::placeholder {
-    color: white
+.country_icon {
+    width: 20px;
+    height: 14px;
 }
 
-form label {
-    color: white;
-    font-size: 8px;
-    visibility: hidden;
-    color: white;
+.country_item .country_icon {
+    margin: 4px 10px 4px 0px;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
+.arrow_icon {
+    height: 8px;
 }
 
-form div:hover hr {
-    opacity: 100%;
-    color: #00C7B3;
-}
-
-
-
-
-.invalidInputField, .validInputField, .emptyInputField, div.countryContainer, #haveVisaContainer, #nextButton{
-    cursor: pointer;
-}
-.invalidInputField input, .validInputField input, .emptyInputField input{
-    cursor: pointer;
-}
-
-
-
-
-/* Warning styles */
-.warningMessage {
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.emptyInputField .warningMessage, .validInputField .warningMessage {
+.country_list_container {
     display: none;
 }
 
-.invalidInputField .warningMessage {
-    color: #FF5658;
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
+.opened_list .arrow_icon {
+    rotate: 180deg;
 }
 
-.invalidInputField hr {
-    color: #FF5658;
+.opened_list .country_list_container {
+    display: block;
+}
+
+.opened_list hr {
+    color: white;
     opacity: 100%;
 }
 
 
-
-
-.warnIcon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}
-
-
-.addFiles .invalidInputField{
-    display: flex;
-    flex-direction: column;
-}
-
-.addFiles .validInputField .warningMessage span {
-    color: #00C7B3;
-}
-
-.addFiles .inputWrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-.validInputField .emptyFileInput span {
-    color: #00C7B3;
-}
-
-.fileInputContainer .emptyInputField .emptyFileInput span, .fileInputContainer .invalidInputField .emptyFileInput span {
-    color: white;
-}
-
-
-
-
-
-
-
-
-
-/* Always visible labels */
-#dateOfBirthdayLabel, #foreignPassportLifespanLabel {
-    visibility: visible;
-}
-
-
-
-
-
-
-
-/* Countries list */
-#phoneNumberContainer, #countryContainer {
+/* Visa styles */
+#visa_input_container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 5px;
 }
 
-#arrow {
-    margin-left: 3px;
-    margin-right: 8px;
-}
-
-#arrow, #arrow2 {
-    width: 8px;
-    height: 5px;
-}
-
-.icon {
-    width: 20px;
-    height: 14px;
-    margin-right: 11px;
-}
-
-#flagAndArrow {
-    display: flex; 
-    flex-direction: row; 
-    align-items: center;
-}
-
-#countriesListForNumberContainer, #countriesListContainer {
-    display: none ;
-}
-#countriesListForNumber {
-    margin-top: 10px;
-}
-
-.country, .country2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 7px;
-}
-
-.country span, .country2 span {
-    color: white;
-    vertical-align: middle;
-
-}
-
-.country:hover span, .country2:hover span {
-    color: #00C7B3;
-}
-
-#phoneNumberLabel {
-    visibility: visible;
-}
-
-#countriesListContainer {
-    margin-top: 5px;
-}
-
-
-
-
-/* 'Have visa' container styles */
-
-#haveVisaContainer {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#haveVisaContainer img {
-    width: 16px;
-    height: 16px;
+.visa_checkbox_item {
     position: absolute;
 }
 
-#iHaveVisaLabel {
-    color: white;
-    font-size: 12px;
-    margin-left: 25px;
-}
-
-#haveVisaContainer input {
-    display: none;
-}
-
-#iHave {
-    display: none;
+#visa_input_container label {
+    margin-left: clamp(20px, 4vw, 25px);
+    font-size: clamp(10px, 2vw, 12px);
 }
 
 
 /* Files styles */
-
-.fileInputContainer {
-    margin-top: 5px;
-}
-
-.fileInputContainer div {
+.add_file_container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.fileIcon {
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
+.add_file_container label {
+    font-size: clamp(11px, 2vw, 12px);
 }
 
-.fileInput {
+.hidden-input {
     display: none;
 }
 
-#addForeignPassportPhotoContainer {
-    margin-top: 20px;
+#files_section {
+    margin-top: 10px;
 }
 
-.fileInputContainer span {
-    font-weight: 400;
-    font-size: 12px;
-    font-family: 'Ubuntu Mono';
+#files_section .wrong_data_warning {
+    margin-top: 10px;
 }
 
+.hidden_file_input_section {
+    display: none;
+}
 
-
-
-
-
-
-
-/* Back and next buttons */
-#backAndNextContainer {
-    margin-top: 30px;
+/* Form bottom styles */
+#button_container {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-.arrowButton {
-    width: 46px;
-    height: 46px;
+#back_button_icon {
+    position: absolute;
+    min-height: 46px;
+    max-height: 50px;
+    height: calc(3vw + 32px);
 }
 
-
-
-#nextContainer {
-    margin: 0 auto;
-    padding-right: 46px;
+#next_button {
+    padding: 15px 70px 15px 70px;
+    border: 1px solid white;
+    border-radius:400px;
+    font-size: clamp(14px, 3vw, 18px);
+    text-align: center;
+    width: 5vw;
+    min-width: 40px;
+    max-width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
 }
 
-#nextButton {
-    height: 44px; 
-    width: 189px; 
-    text-align: center; 
-    border-radius: 22px; 
-    border: 1px solid white; 
-    display: flex; 
-    justify-content: center; 
-    color: white; 
-}
-
-#nextButton:hover {
+#next_button:hover {
     background-color: #00C7B3;
     border-color: #00C7B3;
 }
 
-#submit {
-    display: none;
-}
-
-
-
-/* Agreement */
-#agreement {
+#agreement_link {
     margin-top: 20px;
     text-align: center;
-    font-size: 10px;
+    
+    font-size: clamp(9px, 2.3vw, 11px);
     opacity: 50%;
 }
 
-a {
+#agreement_link a {
     text-decoration: none;
-    color: white;
 }
 
 
 
-/* Header */
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 49px;
-    margin-bottom: 203px;
-}
-
-#icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-#rosatom {
-    width: 106px;
-    height: 22px;
-}
-
-#nuclear {
-    width: 146px;
-    height: 31px;
-}
-
-#hackatom {
-    width: 112px;
-    height: 45px;
-}
-
-#future {
-    width: 108px;
-    height: 28px;
-}
-
-
-
-#links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 44px;
-}
-
-#links a, #links div {
-    font-family: 'Ubuntu Mono';
-    font-size: 16px;
-}
-
-#icons a, #links a, #links div {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-#links a:hover {
-    color: #D5FF6B;
-}
-
-#links div {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-right: 25px;
-    padding-left: 25px;
-    border-radius: 22px;
-    background-color: #D5FF6B;
-    cursor: pointer;
-}
-
+/* Footer */
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 200px;
-    padding-bottom: 100px;
-    font-family: 'Ubuntu Mono';
-    color: white;
-
+    margin-top: calc(9vw + 5px);
+    padding: calc(9vw + 5px) 5% calc(5vw + 10px) 5%;
     background-image: linear-gradient(180deg, #182540 0%, #000000 100%);
-
 }
 
-footer table {
-    width: 90%;
+footer hr {
+    width: 100%;
+    color: white;
+    opacity: 10%;
+}
+
+@media (max-width: 880px) {
+    #wide_display_footer {
+        display: none;
+    }
+}
+
+@media (min-width: 880px) {
+    #narrow_display_footer {
+        display: none;
+    }
+}
+
+
+#narrow_display_footer {
+    margin: 20px calc(3vw);
+}
+
+#wide_display_footer table {
+    width: 100%;
 }
 
 
 
-
-#footerLinks {
-    display: block;
-    
-
-}
-
-#footerLinks a {
-    font-size: 18px;
-
-}
-
+/* Wild display footer */
 
 #hackatomLogo {
     width: 229px;
     height: 91px;
+}
+
+#usefullResourciesLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#usefullResourciesLabel hr {
+    height: 0px;
+}
+
+#usefullResourciesLabel, #innerTable tr {
+    height: 40px;
+}
+
+#helpfullResourcies {
+    white-space: nowrap;
+    margin-right: 10px;
+    color: white;
+}
+
+#innerTable {
+    width: 100%;
 }
 
 #rosatomLogo {
@@ -490,14 +507,8 @@ footer table {
     height: 11px;
 }
 
-#usefullResourciesLabel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#usefullResourciesLabel hr {
-    height: 0px;
+.littleText {
+    font-size: 12px;
 }
 
 #rosatomAndVeonix {
@@ -507,49 +518,9 @@ footer table {
     align-items: center;
 }
 
-#newsletterTd {
-    display: flex;
-    width: 100%;
-    text-align: center;
-}
 
-#newsletterTd a {
-    flex: 1;
-}
-
-
-#line {
-    height: 0px;
-}
-
-
-
-
-#footerTable {
-    width: 80%;
-}
-
-
-#usefullResourciesLabel, #innerTable tr {
-    height: 40px;
-}
-
-#innerTable {
-    width: 100%;
-}
-
-.littleText {
-    font-size: 12px;
-}
-
-#veonixLink {
-    margin-right: 20px;
-}
-
-#veonixLink a:hover {
-    text-decoration: underline;
-    color: white;
-    
+#rosatomGlobal {
+    height: 35px;
 }
 
 #angle {
@@ -558,15 +529,169 @@ footer table {
     align-items: center;
 }
 
+
+#veonixLink {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#veonixLink a:hover {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+
+
+.arrowButton {
+    width: 46px;
+    height: 46px;
+}
+
+
+
+
 #toTopButton {
     cursor: pointer;
     rotate: 90deg;
 }
 
-#rosatomGlobal {
-    height: 35px;
+
+
+
+
+
+
+
+
+
+/* Narrow display footer */
+/* Footer global hackatom icon and text links */
+
+#global_hackatom_large_icon_and_text_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-footer a:hover {
+#global_hackatom_large_icon_and_text_links a {
+    width: 50%;
+}
+
+#global_hackatom_large_icon_and_text_links a img {
+    width: 100%;
+}
+
+.footer_text_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: clamp(12px, 2.5vw, 17px);
+}
+
+.footer_text_links a {
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.footer_text_links a:hover {
     color: #D5FF6B;
 }
+
+
+/* Narrow footer helpfull resourcies */
+
+.helpfull_resourcies_container {
+    margin: 20px;
+    margin: 20px 0% 20px 0%;
+}
+
+.helpfull_resourcies_label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: clamp(10px, 3vw, 20px)
+}
+
+.helpfull_resourcies_label span {
+    white-space: nowrap;
+    margin-right: 10px;
+    color: white;
+    font-size: clamp(0.3rem, 3.5vw, 16px);
+}
+
+
+.helpfull_resourcies_icons_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.helpfull_resourcies_icons_line a {
+    width: 25%;
+    display: block;
+}
+
+.helpfull_resourcies_icons_line a img {
+    width: 100%;
+}
+
+
+/* Narrow footer bottom */
+
+#footer_bottom {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    font-size: clamp(6px, 2.5vw, 14px);
+    color: white;
+}
+
+#footer_bottom a {
+    text-decoration: none;
+}
+
+#footer_bottom a:hover {
+    color: #D5FF6B;
+}
+
+#footer_bottom div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#rosatom_global_footer_icon {
+    min-height: 30px;
+    max-height: 40px;
+    height: calc(3vw + 22px);
+}
+
+#footer_angle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#veonix_link {
+    margin-right: 2vw;
+}
+
+#veonix_link:hover {
+    color: white !important;
+    text-decoration: underline;
+}
+
+#to_top_button_img {
+    min-height: 46px;
+    max-height: 50px;
+    height: calc(3vw + 32px);
+    rotate: 90deg;
+}
+
+
